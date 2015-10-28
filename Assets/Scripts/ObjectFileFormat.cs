@@ -112,7 +112,7 @@ public static class ObjectFileFormat
                 line = line.Substring(0, sharp);
             }
             line = line.Trim(" \t\n\r".ToCharArray());
-            yield return re.Split(line);
+            if (line.Length > 0) yield return re.Split(line);
         }
     }
 
